@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Readme Generator</title>
+  <style>
+		body {
+			margin: 0;
+			padding: 0;
+			width: 300px;
+			border-radius: 10px;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		}
+		body > h1 {
+			max-width: max-content;
+			margin: 0 auto;
+			padding: 10px;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			padding: 15px;
+		}
+		form > label {
+			margin-bottom: 5px;
+		}
+		form > input, textarea {
+			padding: 10px;
+			border-radius: 5px;
+			outline: none;
+			border: 1px gray solid;
+		}
+		button {
+			max-width: max-content;
+			border: none;
+			background-color: purple;
+			color: white;
+			padding: 8px;
+			border-radius: 4px;
+			margin: 0 auto;
+		}
+  </style>
+</head>
+<body>
+  	<h1>Generate README.md</h1>
+	<form id="readmeForm">
+		<label for="repoName">Repository Name:</label>
+		<input type="text" id="repoName" required><br>
+
+		<label for="repoDescription">Repository Description:</label>
+		<textarea id="repoDescription" rows="4" required></textarea><br>
+
+		<button type="button" id="generateButton">Generate README</button>
+	</form>
+
+  <script src="popup.js"></script>
+</body>
+</html>
